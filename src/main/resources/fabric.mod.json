@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "chunklimiter",
+  "version": "1.0.0",
+  "name": "Chunk Render Limiter",
+  "description": "Limits the number of chunks rendered client-side",
+  "environment": "client",
+  "entrypoints": {
+    "main": ["com.yourname.chunklimiter.ChunkLimiterMod"],
+    "client": ["com.yourname.chunklimiter.ChunkLimiterModMenu"]
+  },
+  "mixins": [
+    "chunklimiter.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "minecraft": "1.20.4",
+    "fabric": "*",
+    "modmenu": ">=7.0.0",
+    "cloth-config2": ">=11.0.99"
+  },
+  "custom": {
+    "modmenu": {
+      "parent": "chunklimiter"
+    }
+  }
+}
